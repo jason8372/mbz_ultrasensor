@@ -1,26 +1,22 @@
-#################################################################################
+# Connect HC-SR04 to Jetson (GPIO Connection)
 
-Directly connect HC-SR04(ultrasonic sensor) to Jetson Nano(applicable to Raspberry Pi)
+#### *HC-SR04 needs to be powered with 5V
 
-Check whether target is detected
 
-#################################################################################
+#### scripts/sensor.py  : Measures the distance from the sensor to the object (2cm ~ 400cm)
+#### src/bag_bool.cpp   : Logic to return boolean value if the object is close enough to the sensor
 
-SETUP:
 
-HC-SR04 needs to be powered with 5V
+### Current setup (scripts/sensor.py line 27~29):
 
-Current setup(scripts/sensor.py line 27~29):
+Mode : BCM
 
-gpio is set to BCM Mode
+Trigger : 10
 
-Trigger -> 10
+Echo : 6
 
-Echo    -> 6
 
-#################################################################################
-
-Start using the sensor and get robot_on_target as rostopic
+### Get robot_on_target as rostopic
 
 $roslaunch sensor_direct ultrasonic_detection.launch -threshold(default 5) -consec_count(default 3)
 
