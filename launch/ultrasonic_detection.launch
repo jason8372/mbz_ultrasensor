@@ -1,0 +1,12 @@
+<launch>
+	<arg name = "threshold" default = "5" />
+	<arg name = "consec_count" default = "3" />
+	<node pkg="sensor_direct" type="sensor.py" name ="sensor"/>
+	<node pkg="sensor_direct" type="bag_bool" name="bag_bool">
+      	
+      		<param name ="threshold" value="$(arg threshold)" />
+      		<param name ="consec_count" value="$(arg consec_count)" />
+      	</node>
+
+
+</launch>
