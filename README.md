@@ -17,8 +17,11 @@ Echo : 6
 
 
 ### Get robot_on_target as rostopic
+```
 
-$roslaunch sensor_direct ultrasonic_detection.launch -threshold(default 5) -consec_count(default 3)
+roslaunch sensor_direct ultrasonic_detection.launch -threshold(default 5) -consec_count(default 3)
+
+```
 
 **threshold(distance from the sensor in cm) 
 
