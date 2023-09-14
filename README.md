@@ -26,3 +26,8 @@ roslaunch sensor_direct ultrasonic_detection.launch -threshold(default 5) -conse
 **threshold(distance from the sensor in cm) 
 
 **consec_count(how much time has passed. Check the sensor specs for actual frequency)
+
+
+## Source
+https://github.com/engcang/HC-SR04-UltraSonicSensor-ROS-RaspberryPi
+https://github.com/NVIDIA/jetson-gpio
